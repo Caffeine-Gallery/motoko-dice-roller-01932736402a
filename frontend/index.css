@@ -1,0 +1,68 @@
+.dice-container {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.die {
+    font-size: 4rem;
+    animation: popIn 0.5s ease-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.rolling-dice {
+    font-size: 4rem;
+    animation: shake 0.5s infinite;
+}
+
+.history-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2rem;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .die {
+        font-size: 3rem;
+    }
+    
+    .history-item {
+        font-size: 1rem;
+    }
+}

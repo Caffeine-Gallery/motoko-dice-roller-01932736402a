@@ -1,0 +1,4 @@
+service : {
+  getHistory: () -> (vec vec nat) query;
+  rollDice: (nat) -> (vec nat);
+}
